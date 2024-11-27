@@ -1,0 +1,110 @@
+
+body {
+    background-color: rgb(40, 135, 54); 
+    color: white;         
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+
+  @keyframes winning-animation {
+    0% {
+      transform: scale(1);
+      background-color: #ffeb3b; /* Winning yellow color */
+    }
+    50% {
+      transform: scale(1.1);
+      background-color: #ffc107; /* Slightly darker yellow */
+    }
+    100% {
+      transform: scale(1);
+      background-color: #ffeb3b;
+    }
+  }
+  
+  .winning-square {
+    animation: winning-animation 1s infinite;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  
+.game {
+    display: flex;            
+    justify-content: center;  
+    align-items: flex-start;  
+    gap: 20px;                
+    font-family: 'Times New Roman', sans-serif; 
+    margin-top: 20px;
+  }
+  
+  /* Styling for the game board */
+  .game-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Styling the game info section */
+  .game-info {
+    font-size: 18px;
+    padding: 10px;
+  }
+  
+  .game-info button {
+    font-size: 16px;
+    padding: 8px 12px;
+    margin: 5px 0;
+    cursor: pointer;
+    background-color: brown;
+    border: 2px solid #333;
+    border-radius: 5px;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+  
+  .game-info button:hover {
+    background-color: #e0e0e0; /* Changes background to light gray */
+    transform: scale(1.05);    /* Slightly enlarges button on hover */
+  }
+  
+  /* Status message styling */
+  .status {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* Styling for the board rows */
+  .board-row {
+    display: flex;          /* Aligns squares in a row */
+    justify-content: center; /* Centers the row */
+  }
+  
+  /* Styling individual square buttons */
+  .square {
+    width: 100px;            /* Makes the squares large and responsive */
+    height: 100px;
+    margin: 5px;
+    font-size: 32px;         /* Large text for 'X' and 'O' */
+    font-weight: bold;
+    text-align: center;      /* Centers text in the square */
+    background-color: rgb(255, 255, 255); 
+    border: 2px solid #a02b2b;  /* Dark border for definition */
+    border-radius: 10px;     /* Rounded corners */
+    cursor: pointer;         /* Changes cursor to pointer on hover */
+    transition: background-color 0.2s, transform 0.2s; /* Smooth hover effect */
+  }
+  
+  /* Hover effect for squares */
+  .square:hover {
+    background-color: #2650c5c8; /* Light gray background on hover */
+    transform: scale(1.05);    /* Slightly enlarges the square */
+  }
+  
+  /* Highlight winning squares */
+  .winning-square {
+    background-color: #ffeb3b; /* Yellow background for winning squares */
+    color: #333;              /* Dark text for contrast */
+    font-weight: bold;
+  }
+  

@@ -1,6 +1,7 @@
 import './styles.css';
 import { useState } from 'react';
-
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../../firebase';
 
 function Square({ value, onSquareClick, index }) {
   return (
@@ -20,6 +21,20 @@ function animateWinningSquares(winningSquares) {
 }
 
 function Board({ xIsNext, squares, onPlay }) {
+  // fix this for next time
+  // const auth = getAuth();
+  // createUserWithEmailAndPassword(auth, email, password)
+  //   .then((userCredential) => {
+  //     // Signed up 
+  //     const user = userCredential.user;
+  //     // ...
+  //   })
+  //   .catch((error) => {
+  //     const errorCode = error.code;
+  //     const errorMessage = error.message;
+  //     // ..
+  //   });
+
   function handleClick(i) {
     if (calculateWinner(squares) || squares[i]) {
       return;
